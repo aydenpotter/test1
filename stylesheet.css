@@ -1,28 +1,69 @@
 p{
-	color:red;
+	color:white;
 	text-align: center;
+	font-family: simplex;
 
 }
-.head{
-	background: linear-gradient(-30deg, white, green);
+h4{
+	color:white;
+	text-align: center;
+	font-family: simplex;
+	margin-top: 1px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	font-size: 1rem;
+
+}
+.head {
+	
+	margin-bottom:20px;
+	padding:4px;
+}
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto:;
+    width: 53.5%;
+    margin-top: 20px;
+    margin-bottom:20px;
+    padding: 30px;
+
+
+    
 }
 body{
 	background:black;
-	background: linear-gradient(-45deg, #4e4e4f, #141E30);
+	background: linear-gradient( -270deg, #9c9c9c, #393939);
+	background-image: url(./background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-h2{
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 100;
-  font-size: 22px;
-  line-height: 24px;
-  padding-bottom: 30px;
-  text-align: center;
-  width: 100%;
-  font-family:Georgia;
-}
+
 h1{
 	text-align: center;
+	font-family: RomanD;
+	
+	color:white;
+	padding: 1px;
+	margin-top: 20px;
+	margin-bottom: 1px;
+	font-size: 3rem;
+	
+}
+h3{
+	display:inline-block;
+	text-align:center;
+	padding: 5px;
+	margin-right: 3px;
+	margin-left: 3px;
+	border-width: 2px;
+	border: solid white;
+	color:white;
+	font-family: simplex;
+
+}
+h3:hover{
+	background: linear-gradient( -270deg, #9c9c9c, #393939);
 }
 li {
   color: white;
@@ -41,4 +82,41 @@ li {
 }
 li:hover {
 	font-size: 20px;
+}
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  background: #7983ff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+}
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 200px;
+}
+.el {
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
+}
+.trigger:hover > .el {
+  max-height: var(--max-height);
 }
